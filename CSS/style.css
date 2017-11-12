@@ -112,11 +112,15 @@ a:visited {
     border-radius: 2px;
 }
 
+.portfolio .external {
+    width: 16.66%;
+}
+
 .card-featured-small {
     position: relative;
     background-size: cover!important;
     color: white;
-    width: 16.66%;
+    width: 100%;
     height: 200px;
 }
 
@@ -845,14 +849,17 @@ button {
     .project-sort-button i {
         width: 100%;
     }
-    .card-featured-small {
+    .portfolio .external {
         width: 16.66%;
+    }
+    .card-featured-small {
+        width: 100%;
         height: 100px;
     }
     .card-featured-small:hover .card-featured-small-hidden {
         display: none;
     }
-    .card-featured-small:active .card-featured-small-hidden {
+    .card-featured-small:focus .card-featured-small-hidden {
         display: flex;
     }
     .card-featured-small-hidden h4 {
@@ -866,7 +873,12 @@ button {
     }
     .contact-card {
         width: 80%;
+    }
+    .contact-card:nth-child(odd) {
         margin-bottom: 50px;
+    }
+    .contact-card:nth-child(even) {
+        margin-bottom: 150px;
     }
     .footer-background {
         background-attachment: scroll!important;
@@ -896,12 +908,12 @@ button {
     .about-card-wrapper {
         margin-top: -75px;
     }
-    .card-featured-small {
+    .portfolio .external {
         width: 33%;
-        height: 100px;
     }
-    .contact-card {
-        margin-bottom: 150px;
+    .card-featured-small {
+        width: 100%;
+        height: 100px;
     }
 }
 

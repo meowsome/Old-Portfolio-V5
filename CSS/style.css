@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'San Francisco Medium';
-    src: url('../fonts/sanfranciscotext-medium.otf');
+    src: url('../fonts/SanFranciscoDisplay-Medium.otf');
 }
 
 @font-face {
     font-family: 'San Francisco Light';
-    src: url('../fonts/sanfranciscodisplay-light.otf');
+    src: url('../fonts/SanFranciscoDisplay-Light.otf');
 }
 
 * {

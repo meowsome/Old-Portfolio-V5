@@ -1,0 +1,79 @@
+@media (min-width: 768px) {
+    .about-card[data-emergence=hidden] {
+        opacity: 0;
+        margin-top: 50px;
+        transition: all 0.35s;
+    }
+    .about-card[data-emergence=visible] {
+        opacity: 1;
+        margin-top: 15px;
+        transition: all 0.35s;
+    }
+    .card-featured-small[data-emergence=hidden] {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.35s;
+    }
+    .card-featured-small[data-emergence=visible] {
+        opacity: 1;
+        transform: scale(1.0);
+        transition: all 0.35s;
+    }
+    .timeline .timeline-event:nth-child(odd) .timeline-content[data-emergence=hidden] {
+        opacity: 0;
+        margin-left: calc(-25% + 50%);
+        transition: all 0.35s;
+    }
+    .timeline .timeline-event:nth-child(odd) .timeline-content[data-emergence=visible] {
+        opacity: 1;
+        margin-left: calc(-25% + 38%);
+        transition: all 0.35s;
+    }
+    .timeline .timeline-event:nth-child(even) .timeline-content[data-emergence=hidden] {
+        opacity: 0;
+        margin-left: calc(50%);
+        transition: all 0.35s;
+    }
+    .timeline .timeline-event:nth-child(even) .timeline-content[data-emergence=visible] {
+        opacity: 1;
+        margin-left: calc(50% + 6%);
+        transition: all 0.35s;
+    }
+    .skill-card-1[data-emergence=hidden],
+    .skill-card-2[data-emergence=hidden],
+    .skill-card-3[data-emergence=hidden] {
+        opacity: 0;
+        margin-top: 50px;
+    }
+    .skill-card-1[data-emergence=visible],
+    .skill-card-2[data-emergence=visible],
+    .skill-card-3[data-emergence=visible] {
+        opacity: 1;
+        margin-top: 15px;
+    }
+    .skill-card-1[data-emergence=hidden],
+    .skill-card-1[data-emergence=visible] {
+        transition: all 0.35s 0.05s;
+    }
+    .skill-card-2[data-emergence=hidden],
+    .skill-card-2[data-emergence=visible] {
+        transition: all 0.35s 0.075s;
+    }
+    .skill-card-3[data-emergence=hidden],
+    .skill-card-3[data-emergence=visible] {
+        transition: all 0.35s 0.1s;
+    }
+    .contact-card-1[data-emergence=hidden],
+    .contact-card-2[data-emergence=hidden] {
+        opacity: 0;
+        margin-top: 50px;
+    }
+    .contact-card-1[data-emergence=hidden],
+    .contact-card-1[data-emergence=visible] {
+        transition: all 0.35s 0.05s;
+    }
+    .contact-card-2[data-emergence=hidden],
+    .contact-card-2[data-emergence=visible] {
+        transition: all 0.35s 0.075s;
+    }
+}

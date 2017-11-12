@@ -843,7 +843,7 @@ button {
         padding: 5px;
     }
     .project-sort-button {
-        width: 28%;
+        width: 25%;
         text-align: center;
     }
     .project-sort-button i {
@@ -874,11 +874,11 @@ button {
     .contact-card {
         width: 80%;
     }
-    .contact-card:nth-child(odd) {
+    .contact-card {
         margin-bottom: 50px;
     }
-    .contact-card:nth-child(even) {
-        margin-bottom: 150px;
+    .contact-card:last-child {
+        margin-bottom: 200px;
     }
     .footer-background {
         background-attachment: scroll!important;

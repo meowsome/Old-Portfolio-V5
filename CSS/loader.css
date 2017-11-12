@@ -23,7 +23,6 @@ body {
     border-top: 1px solid white;
     width: 75px;
     height: 75px;
-    position: absolute;
     animation: spin 1s linear infinite;
 }
 

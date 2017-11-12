@@ -668,6 +668,9 @@ button {
     height: 75px;
     cursor: pointer;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 0;
     top: 0;
     transition: all 0.25s;
@@ -675,7 +678,8 @@ button {
 
 .x-button p {
     color: white;
-    font-size: 40px;
+    font-size: 50px;
+    margin-top: -10px;
     transition: all 0.5s;
 }
 
@@ -685,7 +689,6 @@ button {
 }
 
 .x-button:hover p {
-    transform: rotate(180deg);
     color: white;
 }
 
@@ -765,7 +768,8 @@ button {
         text-align: left;
     }
     .fixed-menu h2 {
-        font-size: 45px;
+        font-size: 35px;
+        margin-top: 0;
     }
     .fixed-menu h4 {
         font-size: 35px;
@@ -788,7 +792,7 @@ button {
     }
     .hamburger {
         display: inline-block;
-        font-size: 40px;
+        font-size: 35px;
         padding: 20px 3%;
         cursor: pointer;
         text-align: right;
@@ -845,12 +849,24 @@ button {
         width: 16.66%;
         height: 100px;
     }
+    .card-featured-small:hover .card-featured-small-hidden {
+        display: none;
+    }
+    .card-featured-small:active .card-featured-small-hidden {
+        display: flex;
+    }
+    .card-featured-small-hidden h4 {
+        font-size: 15px;
+    }
+    .card-featured-small-hidden p {
+        font-size: 10px;
+    }
     .contact-card-wrapper {
         margin-bottom: -225px;
     }
     .contact-card {
         width: 80%;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
     .footer-background {
         background-attachment: scroll!important;
@@ -883,6 +899,9 @@ button {
     .card-featured-small {
         width: 33%;
         height: 100px;
+    }
+    .contact-card {
+        margin-bottom: 150px;
     }
 }
 

@@ -265,6 +265,7 @@ a:visited {
 }
 
 .project-sort-button {
+    cursor: pointer;
     width: 15%;
     padding: 12px;
 }
@@ -489,6 +490,8 @@ button {
 }
 
 .welcome-menu-item {
+    display: inline-block;
+    overflow: hidden;
     background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
     background-position: 0% 0%;
     background-size: 100% 200%;
@@ -564,6 +567,8 @@ button {
 .fixed-menu-item-skills,
 .fixed-menu-item-portfolio,
 .fixed-menu-item-contact {
+    display: inline-block;
+    overflow: hidden;
     background: linear-gradient(to top, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
     background-position: 0% 100%;
     background-size: 100% 200%;

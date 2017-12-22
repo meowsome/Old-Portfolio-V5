@@ -14,7 +14,7 @@ setTimeout(function() {
     random_img[1] = '14701259_1862466893982490_3484458704697294848_n.jpg';
     random_text[1] = '<a href="https://www.instagram.com/p/BMCriPrBF0H" target="_blank">@cloudy.l_</a>';
     random_img[2] = 'IMG_8421.png';
-    random_text[2] = '<a href="https://www.instagram.com/p/BMsCgXygK6w" target="_blank">@chitanaciru</a>';
+    random_text[2] = '<a href="https://aminoapps.com/c/pokemon/page/blog/leafeon/0ehk_uQERaaxqdwRDw5Mqx4mvnDEKB" target="_blank">Boni-Moni</a>';
     random_quote[0] = '<p style="margin-bottom:5px;">"I\'d rather be myself, myself and nasty. Not somebody else, however jolly."</p><p><b>-Aldous Huxley, Brave New World</b></p>';
     random_quote[1] = '<p style="margin-bottom:5px;">"You don\'t know my brain the way you know my name, you don\'t know my heart the way you know my face."</p><p><b>-Tyler Joseph, Message Man</b></p>';
     random_quote[2] = '<p style="margin-bottom:5px;">"I want to stand as close to the edge as I can without going over. Out on the edge you see all kinds of things you can\'t see from the center."</p><p><b>-Kurt Vonnegut Jr., Player Piano</b></p>';

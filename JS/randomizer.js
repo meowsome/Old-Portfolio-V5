@@ -20,10 +20,12 @@ setTimeout(function() {
     random_quote[2] = '<p style="margin-bottom:5px;">"I want to stand as close to the edge as I can without going over. Out on the edge you see all kinds of things you can\'t see from the center."</p><p><b>-Kurt Vonnegut Jr., Player Piano</b></p>';
     random_quote[3] = '<p style="margin-bottom:5px;">"Sic semper tyrannis."</p><p><b>-Marcus Junius Brutus, Assassination of Julius Caesar</b></p>';
     random_quote[4] = '<p style="margin-bottom:5px;">"Everything was beautiful, and nothing hurt."</p><p><b>-Kurt Vonnegut Jr., Slaughterhouse-Five</b></p>';
-    $('.footer-background').css({
-        'background-image': 'url(images/footer/' + random_img[random_number] + ')'
-    });
+    setTimeout(function() {
+        $('.footer-background').css({
+            'background-image': 'url(images/footer/' + random_img[random_number] + ')'
+        });
+    }, 2000);
     $('.copyright').html(random_text[random_number]);
     $('.quote').html(random_quote[random_quote_number]);
     
-}, 4000);
+}, 2000);

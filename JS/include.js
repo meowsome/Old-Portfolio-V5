@@ -1,6 +1,4 @@
-$(document).ready(function () {
-    w3.includeHTML();
-    
+$(document).ready(function () {    
     emergence.init({
         reset: false,
         offsetBottom: 150,

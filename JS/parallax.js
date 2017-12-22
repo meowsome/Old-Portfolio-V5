@@ -15,9 +15,4 @@ setTimeout(function () {
         var half = $('.footer-background').height() * 2.4;
         $('.footer-background').css('background-position', 'center ' + (half - (scrolled * .25)) + 'px');
     });
-    $(window).on('scroll', function () {
-        var scrolled = $(window).scrollTop();
-        var half = $('.parallax').height() * 3;
-        $('.parallax').css('background-position', 'center ' + (half - (scrolled * .25)) + 'px');
-    });
 }, 1000);

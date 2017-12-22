@@ -1,17 +1,22 @@
 /* Main Elements*/
 
 @font-face {
-    font-family: 'San Francisco Medium';
-    src: url('../fonts/SanFranciscoText-Medium.otf');
+    font-family: 'Bold';
+    src: url('../fonts/Product-Sans-Bold.ttf');
 }
 
 @font-face {
-    font-family: 'San Francisco Light';
-    src: url('../fonts/SanFranciscoDisplay-Light.otf');
+    font-family: 'Regular';
+    src: url('../fonts/Product-Sans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('../fonts/Product-Sans-Light.ttf');
 }
 
 * {
-    font-family: 'San Francisco Light';
+    font-family: 'Light';
     margin: 0;
     padding: 0;
 }
@@ -20,14 +25,16 @@ body {
     background: #e2e2e2;
 }
 
-h1,
+h1 {
+    font-family: 'Bold'!important;
+}
+
 h2,
 h3,
 h4,
 h5,
-b,
-strong {
-    font-family: 'San Francisco Medium'!important;
+b {
+    font-family: 'Regular'!important;
 }
 
 h1 {
@@ -106,7 +113,7 @@ a:visited {
 .card {
     background: white;
     position: relative;
-    padding: 50px 5%;
+    padding: 25px 5%;
     margin: 0 1.5%;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
@@ -148,7 +155,7 @@ a:visited {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    animation: small-card 0.25s;
+    animation: small-card 0.25s forwards;
 }
 
 .card-featured-small:hover .card-featured-small-hidden {
@@ -157,11 +164,9 @@ a:visited {
 
 @keyframes small-card {
     from {
-        opacity: 0;
         transform: scale(0.8);
     }
     to {
-        opacity: 1;
         transform: scale(1.0);
     }
 }
@@ -496,7 +501,7 @@ button {
     background-position: 0% 0%;
     background-size: 100% 200%;
     font-size: 20px;
-    margin-bottom: calc(-25%);
+    margin-bottom: -150px;
     padding: 29px 3%;
     cursor: pointer;
     transition: all 0.25s;
@@ -515,7 +520,7 @@ button {
 }
 
 .welcome-menu .left {
-    margin-bottom: calc(-25%);
+    margin-bottom: -150px;
 }
 
 .welcome-copyright-button {
@@ -705,8 +710,7 @@ button {
     display: none;
 }
 
-.noscript,
-.browser-error {
+.noscript {
     background: linear-gradient(to right, rgb(60, 160, 147), rgb(0, 102, 65));
     position: fixed;
     z-index: 20;
@@ -719,37 +723,16 @@ button {
     align-items: center;
 }
 
-.noscript p,
-.browser-error p {
+.noscript p {
     color: white;
     width: 50%;
     text-align: center;
     font-size: 30px;
 }
 
-.noscript a,
-.browser-error a {
+.noscript a {
     color: white;
 }
-
-.browser-error {
-    display: none;
-}
-
-@supports (-ms-ime-align: auto),
-(-webkit-appearance:none) {
-    .browser-error {
-        display: flex!important;
-    }
-}
-
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
-    .browser-error {
-        display: flex!important;
-    }
-}
-
 
 /* Mobile Settings */
 
@@ -957,7 +940,7 @@ button {
 @keyframes slideIn {
     from {
         opacity: 0;
-        margin-bottom: calc(-25%);
+        margin-bottom: -150px;
     }
     to {
         opacity: 1;

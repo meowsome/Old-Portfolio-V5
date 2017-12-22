@@ -19,12 +19,14 @@ Some scripts from outside sources were used in the making of this site. Credit t
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="meowsome, mwsm, web design, web developer, nogard, leafeon, html, css, jquery, javascript, php">
     <meta name="description" content="Web designer/developer, amateur artist, Minecraft server owner, and technology enthusiast. This website is a portfolio of meowsome's work!">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!-- Load External CSS-->
-    <link rel="stylesheet" href="CSS/style.css" onerror="$('.error').css({'display': 'flex' });">
-    <link rel="stylesheet" href="CSS/loader.css" onerror="$('.error').css({'display': 'flex' });">
-    <link rel="stylesheet" href="CSS/timeline.css" onerror="$('.error').css({'display': 'flex' });">
-    <link rel="stylesheet" href="CSS/animations.css" onerror="$('.error').css({'display': 'flex' });">
-    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css" onerror="$('.error').css({'display': 'flex' });">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/loader.css">
+    <link rel="stylesheet" href="CSS/timeline.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="CSS/ripple.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 
 <body>
@@ -32,22 +34,619 @@ Some scripts from outside sources were used in the making of this site. Credit t
         <div class="loader"></div>
     </div>
     <div class="welcome-point">
-        <div w3-include-html="html/welcome.html"></div>
+        <div class="welcome-background"></div>
+        <div id="welcome-menu"></div>
+        <div class="welcome" id="home">
+            <i class="welcome-copyright-button fa fa-info-circle" aria-hidden="true" onclick="$('.welcome-copyright').toggleClass('welcome-copyright-inline');"></i>
+            <div class="welcome-copyright">
+                <a href="https://www.instagram.com/p/BQUVCLtjERe/" target="_blank">Header art by @_blobster_</a>
+            </div>
+            <div class="welcome-menu">
+                <div class="left" style="width:50%;padding-bottom:20px;">
+                    <h1>meowsome</h1>
+                    <p class="subtitle">Web designer/developer, amateur artist, Minecraft server owner, and technology enthusiast.</p>
+                </div>
+                <div class="right" style="width:50%;">
+                    <a class="welcome-menu-item welcome-menu-item-about ripple-dark" href="#welcome-menu">
+                        <h4>About</h4>
+                    </a>
+                    <a class="welcome-menu-item welcome-menu-item-skills ripple-dark" href="#skills">
+                        <h4>Skills</h4>
+                    </a>
+                    <a class="welcome-menu-item welcome-menu-item-portfolio ripple-dark" href="#portfolio">
+                        <h4>Portfolio</h4>
+                    </a>
+                    <a class="welcome-menu-item welcome-menu-item-contact ripple-dark" href="#contact">
+                        <h4>Contact</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed-menu">
+            <div class="left" style="width:50%;">
+                <h2>meowsome</h2>
+            </div>
+            <div class="hamburger" onclick="$('.menu-items').addClass('menu-active');">
+                <a>&#9776;</a>
+            </div>
+            <div class="menu-items right" style="width:50%;">
+                <div class="x-button basic-flex" onclick="$('.menu-items').delay(500).removeClass('menu-active');">
+                    <p>&#215;</p>
+                </div>
+                <a class="fixed-menu-item ripple-dark" href="#home">
+                    <h4>Home</h4>
+                </a>
+                <a class="fixed-menu-item fixed-menu-item-about ripple-dark" href="#welcome-menu">
+                    <h4>About</h4>
+                </a>
+                <a class="fixed-menu-item fixed-menu-item-skills ripple-dark" href="#skills">
+                    <h4>Skills</h4>
+                </a>
+                <a class="fixed-menu-item fixed-menu-item-portfolio ripple-dark" href="#portfolio">
+                    <h4>Portfolio</h4>
+                </a>
+                <a class="fixed-menu-item fixed-menu-item-contact ripple-dark" href="#contact">
+                    <h4>Contact</h4>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="about" id="about" style="margin-top:-30%;">
-        <div w3-include-html="html/about.html"></div>
+        <div class="about-card-wrapper basic-flex">
+            <div class="about-card card basic-flex" data-emergence="hidden">
+                <div class="about-card-left">
+                    <img class="logo" src="images/logo.png">
+                </div>
+                <div class="about-card-right">
+                    <h3>meowsome</h3>
+                    <h4 class="subtitle-inverted">Developer, artist, gamer, nerd.</h4>
+                    <p style="color:gray;">I'm just an out-of-the-ordinary guy who sees things a bit differently. I generally call myself "meowsome" online, and I use a Leafeon as my persona. I enjoy coding websites, drawing, playing video games, and more. Feel free to ask me more about myself in conversation!</p>
+                    <div class="basic-flex" style="justify-content:flex-start;margin-top:-10px;">
+                        <a class="masterTooltip" title="Telegram" href="http://t.me/leafeon" target="_blank"><i class="social fa fa-telegram fa-lg"></i></a>
+                        <a class="masterTooltip" title="Instagram" href="http://instagr.am/meowsom3" target="_blank"><i class="social fa fa-instagram fa-lg"></i></a>
+                        <a class="masterTooltip" title="Twitter" href="http://twitter.com/meowsom3" target="_blank"><i class="social fa fa-twitter fa-lg"></i></a>
+                        <a class="masterTooltip" title="Github" href="http://github.com/meowsome" target="_blank"><i class="social fa fa-github fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <h3 class="timeline-title center">History</h3>
+            <div class="container">
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="card-timeline timeline-content" data-emergence="hidden">
+                            <h4>Discovery of Jimdo &amp; Tumblr</h4>
+                            <p class="subtitle-inverted" style="font-size:16px;margin-bottom:10px;">Summer 2014</p>
+                            <p>Recently having received an iPad Mini as a Christmas present, I was excited to learn more about what the web had to offer. I'm not exactly sure how, but I discovered <a href="http://jimdo.com" target="_blank">Jimdo</a> first (which looks much different now than it had in the past), and began to tinker around with how it worked. A while later, I discovered <a href="http://tumblr.com" target="_blank">Tumblr</a>, and found that I could apply the coding aspects I taught myself from Jimdo. It wasn't much, but this is how my interest coding began.</p>
+                        </div>
+                        <div class="timeline-badge" style="background:#f5cb62;">
+                            <i class="badge-image fa fa-lightbulb-o fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="card-timeline timeline-content" data-emergence="hidden">
+                            <h4>Minecraft Server</h4>
+                            <p class="subtitle-inverted" style="font-size:16px;margin-bottom:10px;">Summer 2015</p>
+                            <p>I had been curious about what it was like to run a Minecraft server for a while, and I finally decided to purchase my own during the Summer of 2015. I called it <a href="http://nogard.us" target="_blank">Nogard</a>, and it's still around today! I learned a lot about network management since I started the server, including working with files via FTP, managing players and staff members, and more.</p>
+                        </div>
+                        <div class="timeline-badge" style="background:#7bcabb;">
+                            <i class="badge-image fa fa-gamepad fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="card-timeline timeline-content" data-emergence="hidden">
+                            <h4>Interest in Art</h4>
+                            <p class="subtitle-inverted" style="font-size:16px;margin-bottom:10px;">Fall 2015</p>
+                            <p>Although I had animated stick figures on <a href="http://flipnote.hatena.com" target="_blank">Flipnote Hatena</a> in the past, my desire to draw other things peaked once school began in 2015. My friend gave me a small tutorial, from which I took some basic knowledge and have grown since. I still attempt to learn more about drawing techniques today, with the help from some other friends.</p>
+                        </div>
+                        <div class="timeline-badge" style="background:#165f99;">
+                            <i class="badge-image fa fa-pencil fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="card-timeline timeline-content" data-emergence="hidden">
+                            <h4>Creating Free Art &amp; Websites</h4>
+                            <p class="subtitle-inverted" style="font-size:16px;margin-bottom:10px;">Summer 2016</p>
+                            <p>I began to create free websites for people I knew to try and improve my web design skills, and improve them it did! You can see the improvement of my development skills by visiting the "<a href="#portfolio">Portfolio</a>" section of this site and comparing the older sites to the newer ones. While doing this, I learned more about <a href="https://www.tumblr.com/docs/en/custom_themes" target="_blank">Tumblr HTML</a>, <a href="http://github.com/meowsome" target="_blank">Github basics</a>, <a href="http://brackets.io" target="_blank">Brackets</a>, and so much more!</p>
+                        </div>
+                        <div class="timeline-badge" style="background:#cc55c0;">
+                            <i class="badge-image fa fa-line-chart fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="card-timeline timeline-content" data-emergence="hidden">
+                            <h4>CSU &amp; Hensel Phelps Internships</h4>
+                            <p class="subtitle-inverted" style="font-size:16px;margin-bottom:10px;">Summer 2017</p>
+                            <p>I had two different internships during the Summer of 2017, which was definitely an amazing opportunity, but also very overwhelming. For the CSU internship, I created a <a class="external" href="projects/epic-lab.html">Wordpress Site</a> for an engineering professor, and for the Hensel Phelps internship, I created a microsite template, shadowed a few developers, and tested an application for bugs. I learned about <a href="https://material.io" target="_blank">Material Design</a>, <a href="http://wordpress.org" target="_blank">Wordpress</a>, <a href="https://azure.microsoft.com" target="_blank">Microsoft Azure</a>, <a href="https://developer.chrome.com/devtools" target="_blank">Chrome DevTools</a>, <a href="http://mamp.info" target="_blank">MAMP</a>, and a lot more during these two internships.</p>
+                        </div>
+                        <div class="timeline-badge" style="background:#cc6155;">
+                            <i class="badge-image fa fa-suitcase fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="skills" id="skills">
-        <div w3-include-html="html/skills.html"></div>
+        <div class="basic-flex">
+            <h3 class="title">Skills</h3>
+            <div class="skill-card card skill-card-2" data-emergence="hidden">
+                <h4 class="card-title"><i class="fa fa-pencil fa-lg"></i><br><br>Digital &amp; Traditional Artwork</h4>
+                <p class="gray">Paper &amp; Pencil</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#cea800;width:50%;">
+                        <div class="bar-circle" style="background:#cea800;"></div>
+                    </div>
+                </div>
+                <p class="gray">GIMP</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#585241;width:35%;">
+                        <div class="bar-circle" style="background:#585241;"></div>
+                    </div>
+                </div>
+                <p class="gray">Photoshop</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#5DBCD2;width:25%;">
+                        <div class="bar-circle" style="background:#5DBCD2;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card card skill-card-3" data-emergence="hidden">
+                <h4 class="card-title"><i class="fa fa-code fa-lg"></i><br><br>Web Design &amp; Development</h4>
+                <p class="gray">HTML</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#e44b25;width:90%;">
+                        <div class="bar-circle" style="background:#e44b25;"></div>
+                    </div>
+                </div>
+                <p class="gray">CSS</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#0b6fb8;width:85%;">
+                        <div class="bar-circle" style="background:#0b6fb8;"></div>
+                    </div>
+                </div>
+                <p class="gray">Wordpress</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#21759b;width:75%;">
+                        <div class="bar-circle" style="background:#21759b;"></div>
+                    </div>
+                </div>
+                <p class="gray">PHP</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#7277af;width:30%;">
+                        <div class="bar-circle" style="background:#7277af;"></div>
+                    </div>
+                </div>
+                <p class="gray">JavaScript &amp; jQuery</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#fa9b1b;width:20%;">
+                        <div class="bar-circle" style="background:#fa9b1b;"></div>
+                    </div>
+                </div>
+                <p class="gray">Enjin</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#5DBCD2;width:20%;">
+                        <div class="bar-circle" style="background:#5DBCD2;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card card skill-card-1" data-emergence="hidden">
+                <h4 class="card-title"><i class="fa fa-server fa-lg"></i><br><br>Minecraft Network Administration</h4>
+                <p class="gray">FTP</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#aa2637;width:85%;">
+                        <div class="bar-circle" style="background:#aa2637;"></div>
+                    </div>
+                </div>
+                <p class="gray">Network Management</p>
+                <div class="bar-wrapper">
+                    <div class="bar" style="background:#b90000;width:50%;">
+                        <div class="bar-circle" style="background:#dd3939;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="basic-flex" style="width:100%;">
+                <div class="basic-flex" style="width:75%;">
+                    <h4 class="center" style="width:100%;padding:50px 0 10px 0;">Programs I'm Familiar With</h4>
+                    <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img class="program masterTooltip" title="Google Chrome" src="images/program/chrome.png"></a>
+                    <a href="https://www.mozilla.org/en-US/firefox/" target="_blank"><img class="program masterTooltip" title="Mozilla Firefox" src="images/program/firefox.png"></a>
+                    <a href="http://www.opera.com/computer/neon" target="_blank"><img class="program masterTooltip" title="Opera Neon" src="images/program/opera neon.png"></a>
+                    <a href="https://www.apple.com/safari/" target="_blank"><img class="program masterTooltip" title="Safari" src="images/program/safari.png"></a>
+                    <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" target="_blank"><img class="program masterTooltip" title="Microsoft Edge" src="images/program/edge.png"></a>
+                    <a href="https://support.microsoft.com/en-us/help/17621/internet-explorer-downloads" target="_blank"><img class="program masterTooltip" title="Internet Explorer" src="images/program/internet explorer.png"></a>
+                    <a href="http://brackets.io/" target="_blank"><img class="program masterTooltip" title="Brackets" src="images/program/brackets.png"></a>
+                    <a href="http://wordpress.org" target="_blank"><img class="program masterTooltip" title="Wordpress" src="images/program/wordpress.png"></a>
+                    <a href="http://github.com" target="_blank"><img class="program masterTooltip" title="Github" src="images/program/github.png"></a>
+                    <a href="http://mamp.info" target="_blank"><img class="program masterTooltip" title="MAMP" src="images/program/mamp.png"></a>
+                    <a href="http://www.binarynights.com/forklift/" target="_blank"><img class="program masterTooltip" title="ForkLift 3" src="images/program/forklift.png"></a>
+                    <a href="https://filezilla-project.org/" target="_blank"><img class="program masterTooltip" title="FileZilla" src="images/program/filezilla.png"></a>
+                    <a href="http://skype.com/" target="_blank"><img class="program masterTooltip" title="Skype" src="images/program/skype.png"></a>
+                    <a href="http://discordapp.com/" target="_blank"><img class="program masterTooltip" title="Discord" src="images/program/discord.png"></a>
+                    <a href="http://telegram.org/" target="_blank"><img class="program masterTooltip" title="Telegram" src="images/program/telegram.png"></a>
+                    <a href="http://www.adobe.com/products/photoshop.html" target="_blank"><img class="program masterTooltip" title="Photoshop" src="images/program/photoshop.png"></a>
+                    <a href="http://www.adobe.com/products/premiere.html" target="_blank"><img class="program masterTooltip" title="Premiere Pro" src="images/program/premierepro.png"></a>
+                    <a href="http://www.adobe.com/products/aftereffects.html" target="_blank"><img class="program masterTooltip" title="After Effects" src="images/program/aftereffects.png"></a>
+                    <a href="http://www.adobe.com/products/dreamweaver.html" target="_blank"><img class="program masterTooltip" title="Dreamweaver" src="images/program/dreamweaver.png"></a>
+                    <a href="https://www.gimp.org/" target="_blank"><img class="program masterTooltip" title="GIMP" src="images/program/gimp.png"></a>
+                    <a href="https://www.apple.com/imovie/" target="_blank"><img class="program masterTooltip" title="iMovie" src="images/program/imovie.png"></a>
+                    <a href="https://obsproject.com/" target="_blank"><img class="program masterTooltip" title="OBS" src="images/program/obs.png"></a>
+                    <a href="https://products.office.com/en-us/word" target="_blank"><img class="program masterTooltip" title="Word" src="images/program/word.png"></a>
+                    <a href="https://products.office.com/en-us/powerpoint" target="_blank"><img class="program masterTooltip" title="PowerPoint" src="images/program/powerpoint.png"></a>
+                    <a href="https://products.office.com/en-us/excel" target="_blank"><img class="program masterTooltip" title="Excel" src="images/program/excel.png"></a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="portfolio" id="portfolio">
-        <div w3-include-html="html/portfolio.html"></div>
+        <div class="basic-flex">
+            <h3 class="title">Portfolio</h3>
+            <div class="basic-flex" style="margin-bottom:15px;">
+                <div onclick="$('.project-website').show();$('.project-art').show();$('#all-projects').addClass('project-sort-button-current');$('#websites-only').removeClass('project-sort-button-current');$('#art-only').removeClass('project-sort-button-current');$('.project-website').attr('data-emergence','visible');$('.project-art').attr('data-emergence','visible');" class="project-sort-button project-sort-button-current basic-flex ripple-dark" id="all-projects">
+                    <a class="subtitle-inverted"><i class="title-image fa fa-list-ul"></i>All Projects</a>
+                </div>
+                <div onclick="$('.project-art').hide();$('.project-website').hide();$('.project-website').show();$('#all-projects').removeClass('project-sort-button-current');$('#websites-only').addClass('project-sort-button-current');$('#art-only').removeClass('project-sort-button-current');$('.project-website').attr('data-emergence','visible');$('.project-art').attr('data-emergence','hidden');" class="project-sort-button basic-flex ripple-dark" id="websites-only">
+                    <a class="subtitle-inverted"><i class="title-image fa fa-laptop"></i>Websites Only</a>
+                </div>
+                <div onclick="$('.project-website').hide();$('.project-art').hide();$('.project-art').show();$('#all-projects').removeClass('project-sort-button-current');$('#websites-only').removeClass('project-sort-button-current');$('#art-only').addClass('project-sort-button-current');$('.project-website').attr('data-emergence','hidden');$('.project-art').attr('data-emergence','visible');" class="project-sort-button basic-flex ripple-dark" id="art-only">
+                    <a class="subtitle-inverted"><i class="title-image fa fa-pencil"></i>Art Only</a>
+                </div>
+            </div>
+            <a class="project-website external" href="projects/personal-site.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/bg.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#167b5f;">
+                        <h4 class="card-title animated-card-title">My Site V5</h4>
+                        <div class="title-separator" style="background:#167b5f;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>December, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/bucketmuncher-2017.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/bucketmuncher-2017.png') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#4F4F4F;">
+                        <h4 class="card-title animated-card-title">BucketMuncher</h4>
+                        <div class="title-separator" style="background:#4F4F4F;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>December, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/epic-lab.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/csu.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#326E32;">
+                        <h4 class="card-title animated-card-title">EPiC Lab</h4>
+                        <div class="title-separator" style="background:#326E32;"></div>
+                        <p class="subtitle animated-subtitle">Wordpress / HTML / CSS / JS / jQuery / PHP<br>August, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/leafeon paper.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/leafeon paper.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#9d9487;">
+                        <h4 class="card-title animated-card-title">Leafeon Paper</h4>
+                        <div class="title-separator" style="background:#9d9487;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>June, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/zako contest.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/zako contest.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#452c36;">
+                        <h4 class="card-title animated-card-title">Contest Entry for @zakodiakblue</h4>
+                        <div class="title-separator" style="background:#452c36;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>May, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/pawsomepawsi.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/pawsomepawsi.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#ca8866;">
+                        <h4 class="card-title animated-card-title">Request for @pawsomepawsi</h4>
+                        <div class="title-separator" style="background:#ca8866;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>April, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/bucketmuncher trade.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/bucketmuncher trade.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#8994b0;">
+                        <h4 class="card-title animated-card-title">Trade with @bucketmuncher</h4>
+                        <div class="title-separator" style="background:#8994b0;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>April, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/nano birthday.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/nano birthday.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#97b4de;">
+                        <h4 class="card-title animated-card-title">Gift for @shy.umbreon</h4>
+                        <div class="title-separator" style="background:#97b4de;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>April, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/jolteon birthday.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/jolteon birthday.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#c2b514;">
+                        <h4 class="card-title animated-card-title">Gift for @jolte0n</h4>
+                        <div class="title-separator" style="background:#c2b514;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>April, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/absol 2.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/absol 2.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#686896;">
+                        <h4 class="card-title animated-card-title">Absol Remake</h4>
+                        <div class="title-separator" style="background:#686896;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>March, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/snowyfurink.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/snowyfurink.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#999dc3;">
+                        <h4 class="card-title animated-card-title">Gift for @snowyfurink</h4>
+                        <div class="title-separator" style="background:#999dc3;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>March, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/smolpaws.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/smolpaws.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#759e70;">
+                        <h4 class="card-title animated-card-title">Gift for @rileiou</h4>
+                        <div class="title-separator" style="background:#759e70;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>March, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/gracie.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/gracie.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#716c81;">
+                        <h4 class="card-title animated-card-title">Gift for @wolfeyartist</h4>
+                        <div class="title-separator" style="background:#716c81;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>March, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/aivilo.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/aivilo.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#8d91d5;">
+                        <h4 class="card-title animated-card-title">Gift for @fox_fluff</h4>
+                        <div class="title-separator" style="background:#8d91d5;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>February, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/nano.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/nano.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#8aacdb;">
+                        <h4 class="card-title animated-card-title">Gift for @shy.umbreon</h4>
+                        <div class="title-separator" style="background:#8aacdb;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>January, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/shinx.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/shinx.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#c36399;">
+                        <h4 class="card-title animated-card-title">Shinx</h4>
+                        <div class="title-separator" style="background:#c36399;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>January, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/hansteartist.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/noname.png') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#ba0403;">
+                        <h4 class="card-title animated-card-title">Hansteartist</h4>
+                        <div class="title-separator" style="background:#ba0403;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>January, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/mala.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/mala.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#92989a;">
+                        <h4 class="card-title animated-card-title">Request for (account deleted)</h4>
+                        <div class="title-separator" style="background:#92989a;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>January, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/zakota 2.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/zakota 2.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#3a567f;">
+                        <h4 class="card-title animated-card-title">Gift for @zakodiakblue</h4>
+                        <div class="title-separator" style="background:#3a567f;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>January, 2017</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/first wacom.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/first wacom.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#9da06b;">
+                        <h4 class="card-title animated-card-title">First Wacom</h4>
+                        <div class="title-separator" style="background:#9da06b;"></div>
+                        <p class="subtitle animated-subtitle">Photoshop / Wacom<br>December, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/bucketmuncher.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/bucketmuncher.png') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#ad410d;">
+                        <h4 class="card-title animated-card-title">BucketMuncher</h4>
+                        <div class="title-separator" style="background:#ad410d;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>November, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/laurellovesyuba.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/frostbitten field attack.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#882708;">
+                        <h4 class="card-title animated-card-title">LaurelLovesYuba</h4>
+                        <div class="title-separator" style="background:#882708;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>October, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/smol-paws.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/smol-paws-bg.jpeg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#441e1e;">
+                        <h4 class="card-title animated-card-title">Smol Paws</h4>
+                        <div class="title-separator" style="background:#441e1e;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>October, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/noname.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/noname.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#363032;">
+                        <h4 class="card-title animated-card-title">Gift for @hansteartist</h4>
+                        <div class="title-separator" style="background:#363032;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>October, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/request.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/request.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#e4cf76;">
+                        <h4 class="card-title animated-card-title">Request for @lightheart._.slays</h4>
+                        <div class="title-separator" style="background:#e4cf76;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>October, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/zakota.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/zakota.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#69768f;">
+                        <h4 class="card-title animated-card-title">Gift for @zakodiakblue</h4>
+                        <div class="title-separator" style="background:#69768f;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>September, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/kpaw.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/preston.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#008080;">
+                        <h4 class="card-title animated-card-title">KPAW</h4>
+                        <div class="title-separator" style="background:#008080;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>September, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/glaceon.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/glaceon.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#398192;">
+                        <h4 class="card-title animated-card-title">Glaceon</h4>
+                        <div class="title-separator" style="background:#398192;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>August, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/sad leafeon.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/sad leafeon.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#324b60;">
+                        <h4 class="card-title animated-card-title">Sad Leafeon</h4>
+                        <div class="title-separator" style="background:#324b60;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>August, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/contest entry.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/contest entry.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#756d5b;">
+                        <h4 class="card-title animated-card-title">Contest Entry for @skypottah</h4>
+                        <div class="title-separator" style="background:#756d5b;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>August, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/glaceon contest.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/glaceon contest.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#235d93;">
+                        <h4 class="card-title animated-card-title">Contest Entry for #chillthesexy</h4>
+                        <div class="title-separator" style="background:#235d93;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>August, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-website external" href="projects/nogard.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/server.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#4c4b81;">
+                        <h4 class="card-title animated-card-title">Nogard</h4>
+                        <div class="title-separator" style="background:#4c4b81;"></div>
+                        <p class="subtitle animated-subtitle">HTML / CSS / JS / jQuery<br>July, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/leafeon.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/leafeon.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#515463;">
+                        <h4 class="card-title animated-card-title">Angry Leafeon</h4>
+                        <div class="title-separator" style="background:#515463;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>July, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/espeon.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/espeon.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#5f4165;">
+                        <h4 class="card-title animated-card-title">Espeon</h4>
+                        <div class="title-separator" style="background:#5f4165;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>July, 2016</p>
+                    </div>
+                </div>
+            </a>
+            <a class="project-art external" href="images/projects/art/absol.png" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/art/thumbnails/absol.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#676767;">
+                        <h4 class="card-title animated-card-title">Sparkly Absol</h4>
+                        <div class="title-separator" style="background:#676767;"></div>
+                        <p class="subtitle animated-subtitle">GIMP / Mouse<br>July, 2016</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
     <div class="contact" id="contact">
-        <div w3-include-html="html/contact.html"></div>
+        <div class="contact-card-wrapper basic-flex">
+            <div class="contact-card contact-card-1 card" data-emergence="hidden">
+                <h3 class="card-title">Contact</h3>
+                <form class="center" method="POST" action="https://formspree.io/meowsom3@gmail.com">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea rows="3" name="message" placeholder="Message"></textarea><br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-card contact-card-2 card" data-emergence="hidden">
+                <a class="twitter-timeline" data-lang="en" data-width="100%" data-height="325px" data-chrome="transparent noborders nofooter" href="https://twitter.com/meowsom3">Sorry, but the inline Twitter module is either loading or has failed to load.</a>
+            </div>
+        </div>
     </div>
     <div class="footer">
-        <div w3-include-html="html/footer.html"></div>
+        <div class="footer-background"></div>
+        <div class="footer-wrapper basic-flex" style="align-items:flex-end;">
+            <div class="quote-wrapper center">
+                <span class="quote"></span>
+            </div>
+        </div>
+        <div class="footer-footer basic-flex">
+            <div class="footer-section">
+                <p class="left"><i class="fa fa-copyright"></i> 2017 <a style="color:white;" href="#welcome-menu">meowsome</a>, All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <div class="basic-flex">
+                    <a class="masterTooltip" title="Telegram" href="http://t.me/leafeon" target="_blank"><i class="social-footer fa fa-telegram fa-lg"></i></a>
+                    <a class="masterTooltip" title="Instagram" href="http://instagr.am/meowsom3" target="_blank"><i class="social-footer fa fa-instagram fa-lg"></i></a>
+                    <a class="masterTooltip" title="Twitter" href="http://twitter.com/meowsom3" target="_blank"><i class="social-footer fa fa-twitter fa-lg"></i></a>
+                    <a class="masterTooltip" title="Github" href="http://github.com/meowsome" target="_blank"><i class="social-footer fa fa-github fa-lg"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p class="right">Featured footer art by <span class="copyright">[an error has occurred]</span></p>
+            </div>
+        </div>
     </div>
     <div class="project-overlay">
         <div class="x-button basic-flex">
@@ -63,48 +662,19 @@ Some scripts from outside sources were used in the making of this site. Credit t
             <p>JavaScript is not enabled in your browser, therefore many aspects to this website will not function correctly. In order to continue, it is suggested to enable JavaScript. <a href="http://www.enable-javascript.com/" target="_blank">Please click here to learn more and for instructions</a>, or <a href="">click here to reload the page</a>.</p>
         </div>
     </noscript>
-    <div class="browser-error">
-        <p>Hello there! Unfortunately, it looks like you are using either Internet Explorer or Microsoft Edge, which currently are known to have issues while displaying the content of this website. <a href="http://google.com/chrome/" target="_blank">Google Chrome</a> is the browser that is recommended for the most accurate browsing experience. But, if you want to, please feel free to <a href="#" onclick="$('.browser-error').fadeOut();">please feel free to click here to dismiss this message</a>.</p>
-    </div>
-    <div id="error" class="error">
-        <p>Sorry, but it looks like one or more external files have failed to load. This means that some aspects of the website will not display properly. <a href="">Click here to reload the page</a>, or <a href="#" onclick="$('.error').fadeOut();">click here to dismiss this message</a>.</p>
-    </div>
-    <style>
-        .error {
-            display: none;
-            background: linear-gradient(to right, rgb(100, 0, 0), rgb(127, 0, 0));
-            position: fixed;
-            z-index: 20;
-            width: 90%;
-            padding: 5%;
-            bottom: 0;
-            left: 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .error p,
-        .error a {
-            color: white;
-            text-align: center;
-            font-size: 20px;
-        }
-
-    </style>
 
     <!-- Load External JS-->
-    <script src="https://www.w3schools.com/lib/w3.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" onerror="document.getElementById('error').style.display = 'flex';"></script>
-    <script type="text/javascript" src="JS/scroll.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/menu.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/tooltip.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/background.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/randomizer.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/include.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/loader.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/parallax.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/load-external.js" onerror="$('.error').css({'display': 'flex' });"></script>
-    <script type="text/javascript" src="JS/emergence.min.js" onerror="$('.error').css({'display': 'flex' });"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="JS/scroll.js"></script>
+    <script type="text/javascript" src="JS/menu.js"></script>
+    <script type="text/javascript" src="JS/tooltip.js"></script>
+    <script type="text/javascript" src="JS/randomizer.js"></script>
+    <script type="text/javascript" src="JS/include.js"></script>
+    <script type="text/javascript" src="JS/loader.js"></script>
+    <script type="text/javascript" src="JS/parallax.js"></script>
+    <script type="text/javascript" src="JS/load-external.js"></script>
+    <script type="text/javascript" src="JS/ripple.js"></script>
+    <script type="text/javascript" src="JS/emergence.min.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ setTimeout(function () {
         var url = this.href;
         if (url.match(/\.(jpg|gif|png)$/)) {
             $('.project-image-view-image').css('display', 'flex');
-            $('.project-overlay-content').load('html/projects/image-view.html');
+            $('.project-overlay-content').load('projects/image-view.html');
             $('.project-image-view-image').html('<img class="project-image-featured" src="' + url + '">');
         } else {
             $('.project-overlay-content').load(url);

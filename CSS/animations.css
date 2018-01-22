@@ -1,3 +1,14 @@
+.project-visible {
+    position: static!important;
+    height: auto!important;
+}
+
+.external:nth-child(n+15) {
+    position: absolute;
+    left: -1000px;
+    height: 0;
+}
+
 @media (min-width: 768px) {
     .about-card[data-emergence=hidden] {
         opacity: 0;

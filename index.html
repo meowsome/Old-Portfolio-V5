@@ -255,6 +255,7 @@ Some scripts from outside sources were used in the making of this site. Credit t
                     <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" target="_blank"><img class="program masterTooltip" title="Microsoft Edge" src="images/program/edge.png"></a>
                     <a href="https://support.microsoft.com/en-us/help/17621/internet-explorer-downloads" target="_blank"><img class="program masterTooltip" title="Internet Explorer" src="images/program/internet explorer.png"></a>
                     <a href="http://brackets.io/" target="_blank"><img class="program masterTooltip" title="Brackets" src="images/program/brackets.png"></a>
+                    <a href="https://en.wikipedia.org/wiki/Terminal_(macOS)" target="_blank"><img class="program masterTooltip" title="Terminal" src="images/program/terminal.png"></a>
                     <a href="http://wordpress.org" target="_blank"><img class="program masterTooltip" title="Wordpress" src="images/program/wordpress.png"></a>
                     <a href="http://github.com" target="_blank"><img class="program masterTooltip" title="Github" src="images/program/github.png"></a>
                     <a href="http://mamp.info" target="_blank"><img class="program masterTooltip" title="MAMP" src="images/program/mamp.png"></a>
@@ -291,6 +292,15 @@ Some scripts from outside sources were used in the making of this site. Credit t
                     <a class="subtitle-inverted"><i class="title-image fa fa-pencil"></i>Art Only</a>
                 </div>
             </div>
+            <a class="project-website external" href="projects/marcel.html" data-emergence="hidden">
+                <div class="card-featured-small" style="background:url('images/projects/sites/marcel.jpg') center no-repeat;">
+                    <div class="card-featured-small-hidden column-flex" style="background:#099B91;">
+                        <h4 class="card-title animated-card-title">Marcel</h4>
+                        <div class="title-separator" style="background:#099B91;"></div>
+                        <p class="subtitle animated-subtitle">Node.js / discord.js<br>January, 2018</p>
+                    </div>
+                </div>
+            </a>
             <a class="project-website external" href="projects/personal-site.html" data-emergence="hidden">
                 <div class="card-featured-small" style="background:url('images/bg.jpg') center no-repeat;">
                     <div class="card-featured-small-hidden column-flex" style="background:#167b5f;">
@@ -301,7 +311,7 @@ Some scripts from outside sources were used in the making of this site. Credit t
                 </div>
             </a>
             <a class="project-website external" href="projects/bucketmuncher-2017.html" data-emergence="hidden">
-                <div class="card-featured-small" style="background:url('images/projects/sites/bucketmuncher-2017.png') center no-repeat;">
+                <div class="card-featured-small" style="background:url('images/projects/sites/bucketmuncher-2017.jpg') center no-repeat;">
                     <div class="card-featured-small-hidden column-flex" style="background:#4F4F4F;">
                         <h4 class="card-title animated-card-title">BucketMuncher</h4>
                         <div class="title-separator" style="background:#4F4F4F;"></div>
@@ -606,6 +616,11 @@ Some scripts from outside sources were used in the making of this site. Credit t
                     </div>
                 </div>
             </a>
+            <div class="basic-flex" style="margin-top:15px;">
+                <div onclick="$('#older-projects').toggleClass('project-sort-button-current');$('.project-art').toggleClass('project-visible');$('.project-website').toggleClass('project-visible');$('.project-website').attr('data-emergence','visible');$('.project-art').attr('data-emergence','visible');" class="project-sort-button basic-flex ripple-dark" id="older-projects">
+                    <a class="subtitle-inverted">Toggle Older Projects</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="contact" id="contact">
